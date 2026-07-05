@@ -3,554 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J19 Omah Ngemie'l - Premium Homemade Culinary Experience</title>
-    <!-- Google Fonts untuk font rekomendasi Playfair Display & Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <title>J19 Omah Ngemie'l Budhe Santy</title>
     <style>
-        /* Variabel Warna J19 Omah Ngemie'l */
-        :root {
-            --tosca-premium: #008080;
-            --tosca-dark: #0b1d1d;
-            --tosca-light: #123a3a;
-            --hitam-elegan: #050e0e;
-            --putih-clean: #ffffff;
-            --gold-soft: #d4af37;
-            --cream-beige: #f5f2eb;
-            --text-muted: #b0c4c4;
-        }
-
-        *, *::before, *::after {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--tosca-dark);
-            color: var(--putih-clean);
+            background-color: #f4f7f6;
+            color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
         }
-
-        /* Tipografi Judul */
-        h1, h2, h3, .brand-title {
-            font-family: 'Playfair Display', serif;
+        header {
+            background-color: #005b5c; /* Warna Teal sesuai Logo */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #004445;
+        }
+        .logo-container {
+            margin-bottom: 15px;
+        }
+        .logo-container img {
+            max-width: 140px;
+            height: auto;
+            border-radius: 50%;
+            background: white;
+            padding: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 8px;
             font-weight: 700;
-            color: var(--gold-soft);
         }
-
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            text-align: center;
-            padding: 120px 20px;
-            background: linear-gradient(135deg, var(--tosca-dark) 0%, var(--tosca-light) 100%);
-            border-bottom: 3px solid var(--gold-soft);
-            position: relative;
-        }
-
-        .hero .brand-title {
-            font-size: 1.3rem;
-            letter-spacing: 5px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 8px;
-            color: var(--putih-clean);
-        }
-
-        .hero h1 span {
-            color: var(--gold-soft);
-        }
-
-        .hero .tagline {
-            font-size: 1.4rem;
-            font-style: italic;
-            color: var(--cream-beige);
-            margin-bottom: 35px;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 750px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* Tombol Aksi (CTA) */
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--gold-soft);
-            color: var(--tosca-dark);
-            padding: 15px 35px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--gold-soft);
-        }
-
-        .btn:hover {
-            background-color: transparent;
-            color: var(--gold-soft);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--gold-soft);
-            border: 2px solid var(--gold-soft);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--gold-soft);
-            color: var(--tosca-dark);
-        }
-
-        /* --- SECTION FORMATTING --- */
-        .section-header {
+        .welcome-section {
             text-align: center;
             margin-bottom: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-
-        .section-title {
-            font-size: 2.6rem;
-            margin-bottom: 10px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: var(--gold-soft);
-            margin: 15px auto 0 auto;
-        }
-
-        .section-subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* Grid Sistem Menu */
-        .grid-menu {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .menu-item {
-            background-color: var(--tosca-light);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 8px;
-            padding: 35px;
-            text-align: center;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .menu-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-soft);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        }
-
-        .menu-item-content h3 {
-            font-size: 1.6rem;
-            color: var(--putih-clean);
+        .welcome-section h2 {
+            color: #005b5c;
             margin-bottom: 15px;
         }
-
-        .menu-item-content p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
-
-        .menu-badge {
-            display: inline-block;
-            background-color: rgba(212, 175, 55, 0.1);
-            color: var(--gold-soft);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            margin-top: auto;
-            align-self: center;
-        }
-
-        /* --- KEUNGGULAN SECTION --- */
-        .why-choose-us {
-            background: linear-gradient(135deg, var(--tosca-light) 0%, rgba(5, 14, 14, 0.8) 100%);
-            border-left: 5px solid var(--gold-soft);
-            padding: 45px;
-            border-radius: 0 12px 12px 0;
-            margin: 70px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .why-choose-us h3 {
-            color: var(--gold-soft);
-            font-size: 1.9rem;
-            margin-bottom: 25px;
-        }
-
-        .features-list {
-            list-style: none;
-        }
-
-        .features-list li {
-            font-size: 1.05rem;
-            margin-bottom: 18px;
-            padding-left: 35px;
-            position: relative;
-            color: var(--cream-beige);
-        }
-
-        .features-list li::before {
-            content: '✨';
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        /* --- QR CODE BANNER --- */
-        .qr-section {
-            background: linear-gradient(135deg, var(--tosca-light) 0%, var(--tosca-dark) 100%);
-            border: 2px dashed var(--gold-soft);
-            border-radius: 16px;
-            padding: 60px 30px;
-            text-align: center;
-            margin: 70px 0;
-        }
-
-        .qr-container {
-            width: 220px;
-            height: 220px;
-            background-color: var(--putih-clean);
-            margin: 35px auto;
+        .product-card {
+            background: white;
             border-radius: 12px;
-            padding: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 200px;
+            background-color: #e2e8f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
+            color: #718096;
+            font-weight: bold;
         }
-
-        .qr-container:hover {
-            transform: scale(1.05);
+        .product-info {
+            padding: 20px;
         }
-
-        .qr-image {
-            max-width: 100%;
-            max-height: 100%;
-            display: block;
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        .product-price {
+            color: #005b5c;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #005b5c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
             border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+            transition: background-color 0.2s;
         }
-
-        .qr-features {
+        .btn:hover {
+            background-color: #004445;
+        }
+        .contact-section {
+            background: #005b5c;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .contact-section h2 {
+            margin-bottom: 15px;
+        }
+        .contact-links {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 20px;
             flex-wrap: wrap;
             margin-top: 25px;
-            font-weight: 600;
-            color: var(--gold-soft);
-            font-size: 0.95rem;
         }
-
-        /* --- TESTIMONI SECTION --- */
-        .grid-testimonial {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .testimonial-card {
-            background-color: rgba(5, 14, 14, 0.6);
-            padding: 35px;
-            border-radius: 8px;
-            font-style: italic;
-            border-top: 3px solid var(--gold-soft);
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .stars {
-            color: var(--gold-soft);
-            margin-bottom: 15px;
-            font-style: normal;
-            font-size: 1.1rem;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--hitam-elegan);
-            text-align: center;
-            padding: 70px 20px 40px 20px;
-            border-top: 1px solid rgba(26, 83, 83, 0.5);
-            margin-top: 90px;
-        }
-
-        footer h4 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        footer .footer-tagline {
-            font-style: italic;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .social-links {
-            margin-bottom: 45px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            color: var(--putih-clean);
+        .contact-btn {
+            background: white;
+            color: #005b5c;
+            padding: 12px 25px;
+            border-radius: 30px;
             text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-            font-weight: 500;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.2s;
         }
-
-        .social-links a:hover {
-            color: var(--gold-soft);
-            transform: translateY(-2px);
+        .contact-btn:hover {
+            background: #f4f7f6;
         }
-
-        footer .copyright {
-            font-size: 0.85rem;
-            color: rgba(128, 160, 160, 0.4);
-            margin-top: 10px;
-        }
-
-        /* Responsivitas Layar Kecil */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.4rem; }
-            .section-title { font-size: 2.1rem; }
-            .btn-group { flex-direction: column; align-items: stretch; }
-            .btn { text-align: center; }
-            .why-choose-us { padding: 30px 20px; }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #718096;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="brand-title">J19 Omah Ngemie'l</div>
-        <h1>Premium <span>Homemade</span> Culinary</h1>
-        <div class="tagline">Rasa Premium, Bikin Nagih</div>
-        <p>Mie Ayam Premium pilihan dengan perpaduan cita rasa gurih khas, topping ayam melimpah, chili oil signature yang menawan, serta dibungkus rapi dalam packaging estetik & modern.</p>
-        
-        <div class="btn-group">
-            <a href="https://santi-11041.myr.id/lp/santi-11041-stellar-diamond-8273/" target="_blank" class="btn">Kunjungi Store Utama</a>
-            <a href="https://s.id/J19omahngemiel" target="_blank" class="btn btn-secondary">Hubungi Info Center</a>
+    <header>
+        <div class="logo-container">
+            <img src="1001086095.png" alt="Logo J19 Omah Ngemie'l">
         </div>
+        <h1>J19 Omah Ngemie'l</h1>
+        <p>Cemilan Nikmat & Premium Teman Santai Anda</p>
     </header>
 
     <div class="container">
-
-        <!-- SIGNATURE MENU SECTION -->
-        <section id="menu" style="scroll-margin-top: 40px;">
-            <div class="section-header">
-                <h2 class="section-title">Signature Menu</h2>
-                <p class="section-subtitle">Pengalaman kuliner homemade kelas premium favorit semua kalangan</p>
-            </div>
-            
-            <div class="grid-menu">
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Mie Ayam Chili Oil</h3>
-                        <p>Sensasi pedas dan gurih autentik racikan rahasia khas J19, disajikan bersama siraman aroma chili oil premium.</p>
-                    </div>
-                    <span class="menu-badge">Authentic Taste</span>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Mie Ayam Pelangi 🌈</h3>
-                        <p>Kreasi mie warna-warni estetik yang diproses secara alami. Sehat, lezat, dan menjadi andalan anak-anak serta keluarga.</p>
-                    </div>
-                    <span class="menu-badge">Family Favorite</span>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Sagoo Mie</h3>
-                        <p>Menyajikan mie bertekstur kenyal premium khas yang dipadukan sempurna dengan limpahan topping istimewa.</p>
-                    </div>
-                    <span class="menu-badge">Premium Texture</span>
-                </div>
-            </div>
+        <section class="welcome-section">
+            <h2>Selamat Datang</h2>
+            <p>Kami menyediakan berbagai macam menu cemilan lezat yang dikemas secara higienis menggunakan stoples kotak premium, paper bowl, serta kemasan kantong sachet matte kualitas terbaik untuk menjaga kesegaran rasa produk.</p>
         </section>
 
-        <!-- COMPLEMENTARY PRODUCTS SECTION -->
         <section>
-            <div class="section-header">
-                <h2 class="section-title">Product Signature J19</h2>
-                <p class="section-subtitle">Variasi menu pelengkap, pelengkap rasa, dan camilan harian</p>
-            </div>
-            
-            <div class="grid-menu">
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Dimsum Homemade</h3>
-                        <p>Camilan dimsum premium bertekstur padat yang dipadukan dengan 3 varian saus premium: Chili Oil, Cuko Pempek, & Saus Sambal.</p>
+            <h2 style="color: #005b5c; margin-bottom: 25px; text-align: center;">Menu Favorit Kami</h2>
+            <div class="products-grid">
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <span>Cemilan Toples Kotak</span>
                     </div>
-                    <span class="menu-badge">Homemade</span>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Chili Oil Signature</h3>
-                        <p>Rasa pedas gurih autentik khas J19. Diracik khusus dari bahan pilihan untuk memperkaya cita rasa hidangan Anda.</p>
+                    <div class="product-info">
+                        <div class="product-title">Varian Toples Premium</div>
+                        <div class="product-price">Rp 25.000</div>
+                        <a href="#" class="btn">Pesan Sekarang</a>
                     </div>
-                    <span class="menu-badge">Best Seller</span>
                 </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Seasoning Oil</h3>
-                        <p>Minyak bumbu premium dengan aroma wangi yang khas untuk menghadirkan kelezatan masakan restoran di rumah Anda.</p>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span>Cemilan Paper Bowl</span>
                     </div>
-                    <span class="menu-badge">Secret Recipe</span>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Juicy Chicken</h3>
-                        <p>Topping ayam gurih dengan potongan tebal yang empuk dan bumbu meresap sempurna khas J19.</p>
+                    <div class="product-info">
+                        <div class="product-title">Varian Paper Bowl Praktis</div>
+                        <div class="product-price">Rp 15.000</div>
+                        <a href="#" class="btn">Pesan Sekarang</a>
                     </div>
-                    <span class="menu-badge">Extra Topping</span>
                 </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Kentang Mustofa</h3>
-                        <p>Olahan stik kentang super garing nan renyah premium dengan perpaduan seimbang rasa manis dan gurih.</p>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span>Cemilan Sachet Matte</span>
                     </div>
-                    <span class="menu-badge">Crispy Snack</span>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <h3>Kering Tempe Teri Kacang</h3>
-                        <p>Camilan dan lauk pelengkap homemade favorit pelanggan yang renyah dengan teri dan kacang tanah gurih.</p>
+                    <div class="product-info">
+                        <div class="product-title">Varian Sachet Ekonomis</div>
+                        <div class="product-price">Rp 10.000</div>
+                        <a href="#" class="btn">Pesan Sekarang</a>
                     </div>
-                    <span class="menu-badge">Traditional Premium</span>
                 </div>
+
             </div>
         </section>
 
-        <!-- WHY CHOOSE US BRANDING SECTION -->
-        <section class="why-choose-us">
-            <h3>Mengapa Memilih J19 Omah Ngemie'l?</h3>
-            <ul class="features-list">
-                <li><strong>Homemade Premium Quality:</strong> Seluruh menu diproduksi higienis mengandalkan bahan segar bermutu tinggi.</li>
-                <li><strong>Rasa Autentik Khas J19:</strong> Kelezatan orisinal dari kombinasi racikan rempah khas dan chili oil premium.</li>
-                <li><strong>Packaging Estetik & Modern:</strong> Dikemas aman dan elegan menggunakan stoples kotak, bowl kraft, maupun sachet foil premium.</li>
-                <li><strong>Frozen & Ready to Eat:</strong> Sangat praktis disajikan kapan saja, tersedia baik dalam bentuk beku maupun siap santap.</li>
-                <li><strong>Bahan Pilihan Berkualitas:</strong> Hanya menggunakan bahan alami pilihan tanpa pengawet berbahaya untuk menjaga cita rasa keluarga.</li>
-                <li><strong>Cocok untuk Keluarga & Hampers:</strong> Estetika kemasan menjadikannya pilihan hadiah premium terbaik bagi relasi atau keluarga Anda.</li>
-            </ul>
-        </section>
-
-        <!-- INTEGRATED S.ID QR BANNER SECTION -->
-        <section class="qr-section">
-            <h2 class="brand-title" style="font-size: 1.9rem;">SCAN QR UNTUK ORDER & MENU</h2>
-            <p style="color: var(--text-muted); font-size: 1rem; max-width: 650px; margin: 10px auto 0 auto;">Pindai kode QR barcode di bawah atau klik langsung gambarnya untuk terhubung dengan info center s.id resmi kami.</p>
-            
-            <!-- Memasang link s.id pada gambar QR Code -->
-            <a href="https://s.id/J19omahngemiel" target="_blank" style="display: inline-block; text-decoration: none;">
-                <div class="qr-container">
-                    <img src="1001008459.jpg" alt="QR Code J19 Omah Ngemie'l" class="qr-image">
-                </div>
-            </a>
-            
-            <div class="qr-features">
-                <span>✔ Menu Lengkap</span>
-                <span>✔ Promo Terbaru</span>
-                <span>✔ WhatsApp Order</span>
-                <span>✔ Review Pelanggan</span>
-                <span>✔ Lokasi Usaha</span>
+        <section class="contact-section">
+            <h2>Pesan Mudah via Online</h2>
+            <p>Klik tombol di bawah ini untuk terhubung langsung dengan admin toko kami.</p>
+            <div class="contact-links">
+                <a href="#" class="contact-btn" target="_blank">Hubungi via Telegram</a>
+                <a href="#" class="contact-btn" target="_blank">Hubungi via WhatsApp</a>
             </div>
         </section>
-
-        <!-- CUSTOMER TESTIMONIALS SECTION -->
-        <section>
-            <div class="section-header">
-                <h2 class="section-title">Testimoni Pelanggan</h2>
-                <p class="section-subtitle">Apa kata penikmat setia kelezatan premium J19 Omah Ngemie'l?</p>
-            </div>
-            
-            <div class="grid-testimonial">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    "Chili oil-nya bener-bener juara dan nagih banget! Pedas gurihnya pas, aromanya khas premium beda kelas dari yang lain."
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    "Jatuh cinta sama packaging-nya yang mewah. Saat paket makanan sampai di rumah tetap cantik, rapi, dan rasanya terjaga."
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    "Sudah jadi menu langganan wajib keluarga tiap minggu. Anak-anak lahap sekali makan Mie Ayam Pelangi karena warnanya alami."
-                </div>
-            </div>
-        </section>
-
     </div>
 
-    <!-- FOOTER SECTION -->
     <footer>
-        <h4>J19 Omah Ngemie'l</h4>
-        <p class="footer-tagline">Premium Homemade Culinary Experience</p>
-        
-        <div class="social-links">
-            <a href="https://santi-11041.myr.id/lp/santi-11041-stellar-diamond-8273/" target="_blank">Online Store Utama</a>
-            <a href="https://s.id/J19omahngemiel" target="_blank">Info Center S.id</a>
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">TikTok</a>
-        </div>
-        
-        <p class="copyright">&copy; 2026 J19 Omah Ngemie'l. All Rights Reserved. Crafted for Elegant Food Experience.</p>
+        <p>&copy; 2026 J19 Omah Ngemie'l Budhe Santy. Semua Hak Dilindungi.</p>
     </footer>
 
 </body>
-    </html>
-    
+        </html>
+                            
